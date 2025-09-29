@@ -88,7 +88,7 @@ public class CourseServiceImplTests {
 
 
         CourseDTO courseDTO = new CourseDTO();
-        course.setId(1L);
+        courseDTO.setCourseID(1L);
         courseDTO.setCourseName("Testing Course");
 
         SubjectDTO subjectDTO = new SubjectDTO();
