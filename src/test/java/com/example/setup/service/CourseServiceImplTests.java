@@ -104,6 +104,7 @@ public class CourseServiceImplTests {
         courseDTO.getSubjects().add(subjectDTO);
         courseDTO.getSubjects().add(subjectDTO2);
 
+        when(courseDAO.findById(1L)).thenReturn(Optional.ofNullable(course));
         when(subjectService.findSubjectByID(1L)).thenReturn(Optional.ofNullable(subject));
         when(subjectService.findSubjectByID(2L)).thenReturn(Optional.ofNullable(subject2));
         when(courseDAO.saveAndFlush(Mockito.any(Course.class))).thenReturn(course);
